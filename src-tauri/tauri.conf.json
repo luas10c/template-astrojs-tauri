@@ -1,0 +1,44 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:4321",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "example",
+    "version": "0.0.1"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false
+    },
+    "windows": [
+      {
+        "resizable": true,
+        "decorations": true,
+        "transparent": true,
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.keira4",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "updater": {
+      "active": false
+    }
+  }
+}
